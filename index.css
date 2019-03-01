@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+
+}
+
+#active {
+  text-decoration: underline;
+}
+
+ /* nav bar*/
+
+.navbar {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--dark);
+  color: var(--light);
+  padding: 1em 0;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.logo {
+  float: left;
+  font-size: 1em;
+  margin: 0;
+  font-weight: 500;
+}
+
+.logo span {
+  font-weight: 700;
+}
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--dark);
+  height: 0px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.site-nav--open {
+  height: auto;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-top: 1px solid #797a7c;
+}
+
+.site-nav a {
+  display: block;
+  padding: 2em 4em;
+  color: var(--light);
+  text-decoration: none;
+}
+
+.site-nav--icon {
+  display: inline-block;
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  width: 1.2em;
+  text-align: right;
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: var(--light);
+  height: 3px;
+  width: 1.7em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+  padding-bottom: 0.1em;
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  transform: rotate(-90deg);
+}
+
+.open .hamburger::after {
+  opacity: 0;
+}
+
+/* main body */
+
+.pimg1, .pimg2, .pimg3, .pimg4 {
+  position: relative;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background: url(images/road.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.pimg2 {
+  background-image: url(images/tree.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+
+}
+
+.pimg3 {
+  background-image: url(images/mountain.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+
+}
+
+.pimg4 {
+  background-image: url(images/lake.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 80vh;
+
+}
+
+.para1, .para2, .para3 {
+  color: var(--light);
+  background-color: var(--dark);
+  text-align: center;
+  padding: 1em 1em 2em 1em;
+}
+
+.ptext {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 8px;
+  color: var(--light);
+}
+
+.titlespan {
+  font-style: italic;
+  font-weight: 700;
+}
+
+h2 {
+  padding: 1em;
+}
+
+.headerspan {
+  font-style: italic;
+  font-weight: 700;
+}
+
+/* footer */
+
+.footer {
+  background: var(--dark);
+  text-align: center;
+  line-height: 2em;
+  color: var(--light);
+  padding: 0.5em;
+}
+
+.footer a {
+  text-align: left;
+  color: var(--light);
+  padding: .5em;
+}
+
+/* media queries */
+
+@media (min-width: 700px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .site-nav a:hover {
+    text-decoration: underline;
+  }
+
+  .site-nav i {
+    display: none;
+  }
+
+  .border {
+    padding: 20px;
+    border: 4px solid var(--light);
+    border-radius: 10px;
+  }
