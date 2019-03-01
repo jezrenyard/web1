@@ -141,7 +141,6 @@ header::after {
   background: url(images/contactbg.jpeg);
   background-position: center;
   background-size: cover;
-  height: 120vh;
 }
 
 .title {
